@@ -19,21 +19,27 @@
         "yiisoft/yii2-redis": "*"
     },
     "require-dev": {
+<<<<<<< HEAD
         "yiisoft/yii2-debug": "~2.0.9",
         "yiisoft/yii2-gii": "~2.0.5",
         "yiisoft/yii2-faker": "~2.0.3",
 
+=======
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+>>>>>>> 7548649dc8d1b0b7c19e1d10fcf53fc1a2e8a17b
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1",
         "codeception/specify": "~0.4.3"
     },
     "config": {
-        "process-timeout": 1800,
-        "fxp-asset":{
-            "installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            }
+        "process-timeout": 1800
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
-    }
+    ]
 }
