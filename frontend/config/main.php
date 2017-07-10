@@ -45,5 +45,11 @@ return [
         ],
         */
     ],
+    'on beforeRequest' => function ($event) {
+        $sender = $event->sender;
+        /* @var $sender yii\web\Application */
+        $sender->language = $sender->request->getPreferredLanguage(['en-US', 'zh-CN']);
+        \Yii::trace("Determined language: {$sender->language}", __METHOD__);
+    },
     'params' => $params,
 ];
